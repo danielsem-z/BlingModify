@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         Modificar Leitor de Codigo de Barras
 // @namespace    https://github.com/danielsem-z
-// @version      0.1
+// @version      0.11
 // @description  Script para permitir ao buscador de produtos do PDV procurar codigo de barras com mais informação alem do codigo
 // @author       danielsem.z
 // @match        https://www.bling.com.br/pdv.php
 // @grant        none
 // ==/UserScript==
 
+console.log("update test");
 const intervalo = setInterval(()=>{
     if(window.frenteCaixa){
         window.valor_total = -1;
