@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Modificar Leitor de Codigo de Barras
 // @namespace    https://github.com/danielsem-z
-// @version      1
+// @version      1.1
 // @description  Script para permitir ao buscador de produtos do PDV procurar codigo de barras com mais informação alem do codigo
 // @author       danielsem.z
 // @updateURL    https://raw.githubusercontent.com/danielsem-z/BlingModify/main/PDV/leitor_codigo_barras.js
@@ -16,6 +16,7 @@ const intervalo = setInterval(()=>{
 
         frenteCaixa.vendaProdutos.getProductByCode = function(element, callback) {
             var search = element.val();
+
             var indexOfAsterisk = search.indexOf('*');
 
             // BEGIN modificado
@@ -58,6 +59,7 @@ const intervalo = setInterval(()=>{
                     } else {
                         element.autocomplete('enable');
                     }
+                    element.focus().select().val('');
                 }
             });
         }
