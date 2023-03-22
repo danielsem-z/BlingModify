@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Modificar Leitor de Codigo de Barras
 // @namespace    https://github.com/danielsem-z
-// @version      0.11
+// @version      1
 // @description  Script para permitir ao buscador de produtos do PDV procurar codigo de barras com mais informação alem do codigo
 // @author       danielsem.z
 // @match        https://www.bling.com.br/pdv.php
