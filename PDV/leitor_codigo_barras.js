@@ -10,7 +10,6 @@
 // @grant        none
 // ==/UserScript==
 
-console.log("Updated!")
 const intervalo = setInterval(()=>{
     if(window.frenteCaixa){
         window.valor_total = -1;
