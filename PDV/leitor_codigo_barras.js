@@ -88,7 +88,6 @@ const intervalo = setInterval(()=>{
                             let quantidade = nroUsa($('#qtde').val());
                             if(window.valor_total != -1){
                                 quantidade = window.valor_total / parseFloat($('#valor_unitario').val().replace(",","."));
-                                quantidade = quantidade / 1000;
                                 quantidade = nroUsa(quantidade.toString().replace(".",","));
                                 window.valor_total = -1;
                             }
