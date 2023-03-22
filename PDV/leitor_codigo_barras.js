@@ -1,14 +1,16 @@
 // ==UserScript==
 // @name         Modificar Leitor de Codigo de Barras
 // @namespace    https://github.com/danielsem-z
-// @version      0.11
+// @version      1
 // @description  Script para permitir ao buscador de produtos do PDV procurar codigo de barras com mais informação alem do codigo
 // @author       danielsem.z
+// @updateURL    https://raw.githubusercontent.com/danielsem-z/BlingModify/main/PDV/leitor_codigo_barras.js
+// @downloadURL  https://raw.githubusercontent.com/danielsem-z/BlingModify/main/PDV/leitor_codigo_barras.js
 // @match        https://www.bling.com.br/pdv.php
 // @grant        none
 // ==/UserScript==
 
-console.log("update test");
+console.log("Updated!")
 const intervalo = setInterval(()=>{
     if(window.frenteCaixa){
         window.valor_total = -1;
@@ -82,7 +84,7 @@ const intervalo = setInterval(()=>{
                         if (!store.state.modulesPermissions.deleteItem && !nroUsaFloat($('#qtde').val())) {
                             $('#qtde').parent().addClass('group-item-form-error');
                         } else {
-                            
+
                             // BEGIN modificado
                             let quantidade = nroUsa($('#qtde').val());
                             if(window.valor_total != -1){
@@ -101,12 +103,12 @@ const intervalo = setInterval(()=>{
                                 'dataCriacao': formatDate(getDataAtual() + ' ' + getHoraAtual(true)),
                                 'descontoItem': nroUsa($('#aba_produto input[data-desconto]').val()),
                                 'precoLista': nroUsa($('#valor_lista').val()),
-                                
+
                                 // BEGIN modificado
                                 // 'quantidade': nroUsa($('#qtde').val()),
-                                'quantidade': quantidade,
+                                'quantidade': quantidade,  // mudei aqui
                                 // END modificado
-                                
+
                                 'valor': nroUsa($('#valor_unitario').val()),
                                 'obs': $.trim($('#comentario').val()),
                                 'unidade': $('#unidade_produto').val(),
